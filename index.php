@@ -140,7 +140,7 @@ file_put_contents("archivo.txt", $strjson);
                 </form>
             </div>
         </div>
-
+        <?php if(count($aTareas)): ?>
         <div class="row">
             <div class="col-12 pt-3">
                 <table class="table table-hover border">
@@ -170,9 +170,14 @@ file_put_contents("archivo.txt", $strjson);
                     </tbody>
                 </table>
             </div>
-
         </div>
-
+        <?php else : ?>
+                <div class="row">
+                    <div class="col-12 py-3">
+                        <div class="alert alert-info" role= "alert">No se han cargado tareas todavia</div>
+                    </div>
+                </div>
+        <?php endif; ?>
     </main>
 </body>
 
